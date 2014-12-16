@@ -1,0 +1,19 @@
+{
+  "name": "xpl-ipx800",
+  "version": "0.1.0",
+  "description": "Node JS layer to send and receive ipx800 commands through xPL",
+  "main": "./lib/xpl-ipx800.js",
+  "dependencies": {
+    "xpl-api": "~1.0.12",
+    "fs": "~0.0.2",
+    "http": "0.0.0"
+  },
+  "keywords": [
+    "XPL","nodejs","ipx800"
+  ],
+  "repository": { "type": "git", "url": "https://github.com/wiseflat/xpl-ipx800.git" },
+  "author": "Mathieu Garcia",
+  "license": "GPL",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/wiseflat/xpl-ipx800"
+}
