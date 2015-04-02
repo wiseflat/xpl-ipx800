@@ -23,7 +23,7 @@ wt._init(function(error, xpl) {
         xpl.on("xpl:ipx800.basic", function(evt) {
 		console.log("Receive message ipx800.basic ", evt);
                 if(evt.headerName == 'xpl-cmnd') {
-			wt.sendM2M('set'+evt.body.device+evt.body.command);
+			wt.sendM2M('Set'+evt.body.device+evt.body.command);
                 }
         }); 
         
