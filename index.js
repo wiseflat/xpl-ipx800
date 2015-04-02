@@ -21,7 +21,7 @@ wt._init(function(error, xpl) {
         wt.readConfig();
 	
         xpl.on("xpl:ipx800.basic", function(evt) {
-		console.log("Receive message ipx800.basic ", evt);
+		//console.log("Receive message ipx800.basic ", evt);
                 if(evt.headerName == 'xpl-cmnd') {
 			wt.sendM2M('Set'+evt.body.device+evt.body.command);
                 }
