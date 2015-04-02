@@ -23,7 +23,7 @@ wt._init(function(error, xpl) {
         
         xpl.on("xpl:ipx800.basic", function(evt) {
 		console.log("Receive message ipx800.basic ", evt);
-                if(evt.headerName == 'xpl-cmnd' && wt.validBasicSchema(evt.body)) {
+                if(evt.headerName == 'xpl-cmnd') {
                         if(evt.body.device == 'led0') wt.sendCommand('set1', evt.body.current);
                         if(evt.body.device == 'led1') wt.sendCommand('set2', evt.body.current);
                         if(evt.body.device == 'led2') wt.sendCommand('set3', evt.body.current);
@@ -61,7 +61,7 @@ wt._init(function(error, xpl) {
         
         xpl.on("xpl:ipx800.config", function(evt) {
 		console.log("Receive message ipx800.config ", evt);
-                if(evt.headerName == 'xpl-cmnd' && wt.validConfigSchema(evt.body)) wt.writeConfig(evt.body);
+                if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
         }); 
 
         xpl.on("xpl:ipx800.request", function(evt) {
