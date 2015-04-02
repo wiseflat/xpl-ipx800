@@ -3,7 +3,8 @@ var schema_ipx800basic = require('/etc/wiseflat/schemas/ipx800.basic.json');
 var schema_ipx800config = require('/etc/wiseflat/schemas/ipx800.config.json');
 
 var wt = new xplipx800(null, {
-	//xplSource: 'bnz-ipx800.wiseflat'
+	xplLog: false,
+	forceBodySchemaValidation: false
 });
 
 wt._init(function(error, xpl) {
