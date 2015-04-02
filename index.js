@@ -25,7 +25,8 @@ wt._init(function(error, xpl) {
         xpl.on("xpl:ipx800.basic", function(evt) {
 		console.log("Receive message ipx800.basic ", evt);
                 if(evt.headerName == 'xpl-cmnd') {
-			if(evt.body.device == 'led0') wt.sendCommand('1', evt.body.command);
+			wt.sendCommand(evt.body.device, evt.body.command);
+			/*if(evt.body.device == 'led0') wt.sendCommand('1', evt.body.command);
                         if(evt.body.device == 'led1') wt.sendCommand('2', evt.body.command);
                         if(evt.body.device == 'led2') wt.sendCommand('3', evt.body.command);
                         if(evt.body.device == 'led3') wt.sendCommand('4', evt.body.command);
@@ -56,7 +57,7 @@ wt._init(function(error, xpl) {
                         if(evt.body.device == 'led28') wt.sendCommand('29', evt.body.command);
                         if(evt.body.device == 'led29') wt.sendCommand('30', evt.body.command);
                         if(evt.body.device == 'led30') wt.sendCommand('31', evt.body.command);
-                        if(evt.body.device == 'led31') wt.sendCommand('32', evt.body.command);
+                        if(evt.body.device == 'led31') wt.sendCommand('32', evt.body.command);*/
 			
                         /*if(evt.body.device == 'led0') wt.sendCommand('1', evt.body.command);
                         if(evt.body.device == 'led1') wt.sendCommand('2', evt.body.command);
