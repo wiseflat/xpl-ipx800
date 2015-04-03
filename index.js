@@ -31,13 +31,8 @@ wt._init(function(error, xpl) {
         }); 
         
         xpl.on("xpl:ipx800.config", function(evt) {
-		console.log("Receive message ipx800.config ", evt);
+		//console.log("Receive message ipx800.config ", evt);
                 if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
         }); 
-
-        /*xpl.on("xpl:ipx800.request", function(evt) {
-		console.log("Receive message ipx800.request ", evt);
-                if(evt.headerName == 'xpl-cmnd') wt.readConfig();
-        });*/
 });
 
