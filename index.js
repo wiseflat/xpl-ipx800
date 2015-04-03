@@ -35,9 +35,9 @@ wt._init(function(error, xpl) {
                 if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
         }); 
 
-        xpl.on("xpl:ipx800.request", function(evt) {
+        /*xpl.on("xpl:ipx800.request", function(evt) {
 		console.log("Receive message ipx800.request ", evt);
                 if(evt.headerName == 'xpl-cmnd') wt.readConfig();
-        });
+        });*/
 });
 
