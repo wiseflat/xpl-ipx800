@@ -19,6 +19,9 @@ wt._init(function(error, xpl) {
 
 	// Load config file into hash
         wt.readConfig();
+        setInterval(function(){
+		wt.sendConfig();
+        }, 30 * 1000);
 	
         xpl.on("xpl:ipx800.basic", function(evt) {
 		//console.log("Receive message ipx800.basic ", evt);
