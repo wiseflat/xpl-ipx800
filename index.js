@@ -24,14 +24,12 @@ wt._init(function(error, xpl) {
         }, 60 * 1000);
 	
         xpl.on("xpl:ipx800.basic", function(evt) {
-		console.log("Receive message ipx800.basic ", evt);
                 if(evt.headerName == 'xpl-cmnd') {
 			wt.sendM2M(evt.body);
                 }
         }); 
         
         xpl.on("xpl:ipx800.config", function(evt) {
-		console.log("Receive message ipx800.config ", evt);
                 if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
         }); 
 });
