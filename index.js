@@ -24,13 +24,11 @@ wt._init(function(error, xpl) {
         }, 60 * 1000);
 	
         xpl.on("xpl:ipx800.basic", function(evt) {
-                if(evt.headerName == 'xpl-cmnd') {
-			wt.sendM2M(evt.body);
-                }
+                if(wt.configHash.enable && evt.headerName == 'xpl-cmnd') wt.sendM2M(evt);
         }); 
         
         xpl.on("xpl:ipx800.config", function(evt) {
-                if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt.body);
+                if(evt.headerName == 'xpl-cmnd') wt.writeConfig(evt);
         }); 
 });
 

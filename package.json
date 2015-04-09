@@ -4,7 +4,7 @@
   "description": "Node JS layer to send and receive ipx800 commands through xPL",
   "main": "./lib/xpl-ipx800.js",
   "dependencies": {
-    "xpl-api": "Nodejs-XPL/xpl-api",
+    "xpl-api": "git://github.com/Nodejs-XPL/xpl-api.git#process_target",
     "fs": "~0.0.2",
     "http": "0.0.0"
   },
