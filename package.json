@@ -1,6 +1,6 @@
 {
   "name": "xpl-ipx800",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node JS layer to send and receive ipx800 commands through xPL",
   "main": "./lib/xpl-ipx800.js",
   "dependencies": {
